@@ -90,8 +90,8 @@ fn main(){
         counter2+=1;
     }
 }
-    */
-
+    
+*/
 
 fn check_guess(guess: i32, secret: i32) -> i32
 {
