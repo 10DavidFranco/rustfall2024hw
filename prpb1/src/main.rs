@@ -10,11 +10,21 @@ struct Book{
 fn save_books(books: &Vec<Book>, filename: &str) {
     // TODO: Implement this function
     // Hint: Use File::create() and write!() macro
+
+    let mut file = File::create(filename);
+    
+    for num in books{
+        write!(file, num.title);
+    }
+
+    
 }
 
 fn load_books(filename: &str) -> Vec<Book> {
     // TODO: Implement this function
     // Hint: Use File::open() and BufReader
+    let file = File::read_to_string(filename);
+
 }
 
 fn main(){
